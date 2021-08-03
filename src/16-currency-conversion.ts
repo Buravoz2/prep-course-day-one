@@ -9,10 +9,25 @@ export {};
  * Find a way to add 1% to all currency conversions (think about the DRY (don't repeat yourself) principle)
  */
 
+const gbp_to_usd_rate = 1.4;
+const gbp_to_brl_rate = 5.6;
+const transaction_fee_multiplier = 1.01;
+
+function convertToForeignCurrency(amount: number, currencyRate: number) : string{
+    return (amount * currencyRate * transaction_fee_multiplier).toFixed(2);
+}
+function convertToUSD(amount: number): string{
+    return convertToForeignCurrency();
+}
+
+/*// You are allowed to change this function
+function convertToUSD(amount: number): string {
+    return (amount * 1.4 * 1.01).toFixed(2);
+}
 // You are allowed to change this function
-function convertToUSD(price) {}
-// You are allowed to change this function
-function convertToBRL(price) {}
+function convertToBRL(amount: number): string {
+    return (amount * 5.6 * 1.01).toFixed(2);
+}*/
 
 const product = "You don't know JS";
 const price = 12.5;
