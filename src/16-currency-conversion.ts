@@ -17,7 +17,10 @@ function convertToForeignCurrency(amount: number, currencyRate: number) : string
     return (amount * currencyRate * transaction_fee_multiplier).toFixed(2);
 }
 function convertToUSD(amount: number): string{
-    return convertToForeignCurrency();
+    return convertToForeignCurrency(amount, gbp_to_usd_rate);
+}
+function convertToBRL(amount: number): string{
+    return convertToForeignCurrency(amount, gbp_to_brl_rate);
 }
 
 /*// You are allowed to change this function
