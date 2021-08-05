@@ -5,6 +5,7 @@ export {};
  * "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
  */
 
+
 const writers = [
   {
     firstName: "Virginia",
@@ -35,3 +36,10 @@ const writers = [
     alive: true
   }
 ];
+for(var i = 0; i < writers.length; i++) {
+  if (writers[i].alive === true) {
+     console.log("Hi, my name is " + writers[i].firstName + " " + writers[i].lastName + " . I am " + writers[i].age + " years old, and work as a " + writers[i].occupation + ".");
+  }
+}
+
+

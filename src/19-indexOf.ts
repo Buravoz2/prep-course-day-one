@@ -14,6 +14,7 @@ function remove(arr, valueToRemove) {
     arr.splice(index, 1);
   }*/
   arr.splice(arr.indexOf(valueToRemove), 1);
+  return arr;
 }
 
 const numbers = [1, 2, 3];
