@@ -24,9 +24,7 @@ function validate(num): boolean {
   if(excludedNums.some(e => e === num)) {  //e => e ??
     return false;
   }
-  else {
-    return true;
-  }
+  return true;
 }
 
 console.log(validate(6));

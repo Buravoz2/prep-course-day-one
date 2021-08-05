@@ -11,7 +11,8 @@ const books = [
   }
 ];
 
-const getTheTitles = (arr) => {for(var i = 0; i < arr.length; i++) {return arr[i].title};  //???
+const getTheTitles = (arr) => {
+  return arr.map(book=>book.title);
 };
 
 console.log(getTheTitles(books)); // Expected output: ['4 hour work week', 'Tools of Titans']
